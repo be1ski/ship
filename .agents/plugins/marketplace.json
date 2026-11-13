@@ -1,0 +1,7 @@
+{
+  "name": "ship",
+  "interface": { "displayName": "Ship" },
+  "plugins": [
+    { "name": "ship", "source": { "source": "local", "path": "./" }, "category": "Productivity" }
+  ]
+}

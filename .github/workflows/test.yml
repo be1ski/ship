@@ -1,0 +1,22 @@
+name: test
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    # Python 3.8 has no setup-python build for newer images.
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.8"
+      - run: python3 -m unittest discover -s tests -v
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+      - run: npm install -g @openai/codex @anthropic-ai/claude-code
+      - run: bash tests/smoke_codex.sh
+      - run: bash tests/smoke_claude.sh

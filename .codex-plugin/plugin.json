@@ -1,0 +1,7 @@
+{
+  "name": "ship",
+  "description": "Cross-vendor review loop for Claude Code and Codex: spec, plan and implementation are driven until an independent reviewer from the other vendor comes back clean.",
+  "skills": "./skills/",
+  "keywords": ["review", "code-review", "workflow", "codex"],
+  "interface": { "displayName": "Ship", "shortDescription": "Cross-vendor review loop" }
+}
